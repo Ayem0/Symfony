@@ -34,7 +34,12 @@ class Categories
     {
         return $this->id;
     }
-
+    
+    public function __toString(): string 
+    {
+        return $this->getName().' ('. $this->getId().')';  
+    }
+    
     public function getName(): ?string
     {
         return $this->name;
